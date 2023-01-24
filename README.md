@@ -44,45 +44,74 @@ If the data bit D is low, the output Y1 is low. IF data bit D is high, the outpu
 
 If the control input changes to AB = 10, then all the gates are restricted except the third AND gate from the top. Then, data bit D is transmitted only to the output Y2; and, Y2 = Data. . The best example of 1X4 demultiplexer is IC 74155.
 
- 
- 
-### Procedure
-/* write all the steps invloved */
-
-
+ ### Procedure
+1.Open Quartus II and select new project .
+2.Open the new file as verilog.
+3.Module Declaration.
+4. Module should have the file name.
+5.Input-Output Delecaration.
+6.Use wire to define the functionality of logic circuits.
+7.End the module.
 
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by:YOGABHARTHI.S 
+RegisterNumbeR:22009015  
 */
+```
+MULTIPLXER:
 
+module mux(i0,i1,i2,i3,s0,s1,y);
+input i0,i1,i2,i3,s0,s1;
+output y;
+wire p,q,r,s,s0c,s1c;
+not(s0c,s0);
+not(s1c,s1);
+and(p,s0c,s1c,i0);
+and(q,s0c,s1,i1);
+and(r,s0,s1c,i2);
+and(s,s0,s1,i3);
+or(y,p,q,r,s);
+endmodule
 
+DE MULTIPLXER:
 
-
-
-
+module demux(y0,y1,y2,y3,s0,s1,i);
+input s0,s1,i;
+output y0,y1,y2,y3;
+wire s0c,s1c;
+nor(s0c,s0);
+nor(s1c,s1);
+and(y0,i,s0c,s1c);
+and(y1,i,s0c,s1);
+and(y2,i,s0,s1c);
+and(y3,i,s0,s1);
+endmodule
+```
 ### RTL LOGIC  
+MULTIPLXER:
+![MULTI](https://user-images.githubusercontent.com/118899387/214289985-300d92aa-06b8-4eb9-ad91-dd15dd32aff8.png)
 
+DE MULTIPLEXER:
+![DEMULTI](https://user-images.githubusercontent.com/118899387/214290080-c0d33353-c311-4b2d-b0cd-4f8a14978ac3.png)
 
+### TRUTH TABLE:  
+MULTIPLXER:
+![MULTT](https://user-images.githubusercontent.com/118899387/214290194-f69d084b-415a-42b7-984b-8827c41b9aa7.png)
+DE MULTIPLEXER:
+![DEMULTT](https://user-images.githubusercontent.com/118899387/214290780-f4abe8eb-724f-46fa-a110-fcd1606e10f0.png)
 
+### TIMING DIAGRAM:
+MULTIPLXER:
+![M1](https://user-images.githubusercontent.com/118899387/214291163-2bf7cddb-4007-4920-a602-9b7182e98384.png)
+![M2](https://user-images.githubusercontent.com/118899387/214291208-1712d2b0-daba-4433-a571-8fb1401e46e1.png)
+![M3](https://user-images.githubusercontent.com/118899387/214291253-8ff3ea1a-ead2-482f-aeda-9ed83f8f6587.png)
+![M4](https://user-images.githubusercontent.com/118899387/214291738-061cd27b-6fc9-4cea-8ddd-da619dd1f2ae.png)
 
+DE MULTIPLEXER:
+![DEMUX](https://user-images.githubusercontent.com/118899387/214291849-a69797b3-87ee-4d3f-b349-6af7a500508c.png)
 
+### RESULTS: 
+Hence the 4 X1 multiplexer and 1X4 de multiplexer has been implemented using verilog and outputs are validated.
 
-
-
-### TIMING DIGRAMS  
-
-
-
-
-
-### TRUTH TABLE 
-
-
-
-
-
-
-### RESULTS 
