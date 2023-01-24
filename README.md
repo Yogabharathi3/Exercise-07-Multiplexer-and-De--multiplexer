@@ -97,8 +97,11 @@ DE MULTIPLEXER:
 ![DEMULTI](https://user-images.githubusercontent.com/118899387/214290080-c0d33353-c311-4b2d-b0cd-4f8a14978ac3.png)
 
 ### TRUTH TABLE:  
+
 MULTIPLXER:
 ![MULTT](https://user-images.githubusercontent.com/118899387/214290194-f69d084b-415a-42b7-984b-8827c41b9aa7.png)
+
+
 DE MULTIPLEXER:
 ![DEMULTT](https://user-images.githubusercontent.com/118899387/214290780-f4abe8eb-724f-46fa-a110-fcd1606e10f0.png)
 
